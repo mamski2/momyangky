@@ -1,229 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Affiliate Linktree — Your Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Momyangky | Links</title>
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#10b981;--glass:rgba(255,255,255,0.04)}
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;min-height:100vh;margin:0;background:linear-gradient(180deg,#071025 0%, #0b1220 100%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:32px}
-    .wrap{width:100%;max-width:420px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
-    .profile{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:18px}
-    .avatar{width:110px;height:110px;border-radius:999px;background:linear-gradient(135deg,#0ea5a5,#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px;color:#02122a;border:6px solid rgba(255,255,255,0.04)}
-    h1{margin:12px 0 0;font-size:20px}
-    p.desc{margin:6px 0 0;color:var(--muted);font-size:13px}
-    .links{display:flex;flex-direction:column;gap:10px;margin-top:18px}
-    .btn{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);text-decoration:none;color:inherit;font-weight:600}
-    .btn small{color:var(--muted);font-weight:500}
-    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-    .control-btn{padding:8px 10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);cursor:pointer;color:var(--muted);font-size:13px}
-    .admin{margin-top:18px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03)}
-    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
-    input[type="text"], textarea, select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#051025;color:inherit}
-    .row{display:flex;gap:8px}
-    .small{width:72px}
-    .muted{color:var(--muted);font-size:13px}
-    .link-actions{display:flex;gap:6px;margin-left:auto}
-    .pill{padding:6px 8px;border-radius:999px;background:rgba(0,0,0,0.18);font-size:12px;border:1px solid rgba(255,255,255,0.03)}
-    footer{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
-    .top-actions{display:flex;gap:8px;align-items:center;justify-content:center;margin-bottom:12px}
-    .hidden{display:none}
-    @media(max-width:480px){.wrap{padding:6px}}
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #e6f7ff);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 30px 15px;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #0078ff;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .link {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: #0078ff;
+      color: white;
+      font-weight: 500;
+      border-radius: 30px;
+      padding: 14px 0;
+      width: 90%;
+      max-width: 380px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0, 120, 255, 0.3);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .link:hover {
+      background: #005fcc;
+      transform: scale(1.03);
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card" id="page">
-      <div class="profile">
-        <div id="avatar" class="avatar">YK</div>
-        <h1 id="title">Your Name or Brand</h1>
-        <p class="desc" id="subtitle">Short bio or tagline — use this to pitch your affiliate offer.</p>
-      </div>
 
-      <div class="links" id="links"></div>
+  <!-- Replace the image below with your own -->
+  <img src="https://via.placeholder.com/120" alt="Profile" class="profile-pic">
 
-      <div class="controls">
-        <button class="control-btn" id="open-admin">Edit links</button>
-        <button class="control-btn" id="copy-page">Copy Page URL</button>
-        <button class="control-btn" id="export-json">Export JSON</button>
-        <button class="control-btn" id="import-json-btn">Import JSON</button>
-      </div>
+  <h1>Momyangky</h1>
+  <p>Discover my top affiliate picks 👇</p>
 
-      <div class="admin hidden" id="admin">
-        <label>Profile image (optional)</label>
-        <input type="file" id="imgfile" accept="image/*">
-        <label style="margin-top:10px">Display name</label>
-        <input id="in-title" type="text" placeholder="Your name or brand" />
-        <label style="margin-top:10px">Subtitle / tagline</label>
-        <input id="in-subtitle" type="text" placeholder="Short tagline" />
-        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)"> 
-        <label>Add new link</label>
-        <input id="in-label" type="text" placeholder="Button label (e.g. Buy Product)" />
-        <input id="in-url" type="text" placeholder="https://affiliate.link/yourcode" style="margin-top:8px" />
-        <div class="row" style="margin-top:8px">
-          <select id="in-type" style="flex:1">
-            <option value="primary">Primary</option>
-            <option value="secondary">Secondary</option>
-            <option value="small">Small / text</option>
-          </select>
-          <input id="in-order" type="number" class="small" placeholder="order" />
-        </div>
-        <div style="display:flex;gap:8px;margin-top:8px">
-          <button class="control-btn" id="add-link">Add link</button>
-          <button class="control-btn" id="close-admin">Close</button>
-        </div>
-        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
-        <label>Existing links (click to edit)</label>
-        <div id="links-admin" style="margin-top:10px"></div>
-        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
-        <div style="display:flex;gap:8px;justify-content:space-between;align-items:center">
-          <div class="muted">Local click analytics stored in browser (optional)</div>
-          <div>
-            <button class="control-btn" id="reset-all">Reset Data</button>
-          </div>
-        </div>
-      </div>
+  <!-- 🔗 Replace these URLs with your affiliate links -->
+  <a class="link" href="https://shopee.co.id/Apple-iPhone-17-Pro-i.241308147.43422527974?extraParams=%7B%22display_model_id%22%3A281832521388%7D" target="_blank">🛒 The Best Iphone to date</a>
+  <a class="link" href="https://shopee.co.id/product/342002332/29059436547?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkWVp3RFo3Mkw5czd4Z0hzdEF1WVFibVdFOXQ5RzJIRTZTOFV0cU90ZzdETGlndjl0UEdaMm41czc1b3FSNzJOZG9OOFZzSmZZUWsyR2hFWHB2R0FKUzZCWVFiSmFTTEVybGpKRGYwUEM0bUpFOVIvdjdOdWRtcXhHUkdIcVRaU3BRPT0&utm_source=chatgpt.com" target="_blank"> Skincare</a>
 
-      <footer>
-        Free single-file Linktree-like page — edit and host anywhere. Click counts are stored locally in your browser.
-      </footer>
-
-    </div>
-  </div>
-
-<script>
-(function(){
-  const DEFAULT = {
-    title: 'Your Name or Brand',
-    subtitle: 'Short bio or tagline — use this to pitch your affiliate offer.',
-    avatarData: null,
-    links: [
-      {id: 'a1', label:'Top Pick — Buy Now', url:'https://example.com?aff=YOURCODE', type:'primary', order:1},
-      {id: 'a2', label:'Learn More', url:'https://example.com/product', type:'secondary', order:2}
-    ]
-  };
-
-  const storageKey = 'affiliate_linktree_v1';
-  const clicksKey = 'affiliate_linktree_clicks_v1';
-
-  function uid(){return 'id'+Math.random().toString(36).slice(2,9)}
-
-  function load(){
-    try{const raw = localStorage.getItem(storageKey);if(raw) return JSON.parse(raw);}catch(e){}
-    return DEFAULT;
-  }
-  function save(data){localStorage.setItem(storageKey, JSON.stringify(data));}
-
-  let data = load();
-  const clicks = JSON.parse(localStorage.getItem(clicksKey)||'{}');
-
-  const el = {title:document.getElementById('title'), subtitle:document.getElementById('subtitle'), avatar:document.getElementById('avatar'), links:document.getElementById('links'), admin:document.getElementById('admin'), linksAdmin:document.getElementById('links-admin')}
-
-  function renderProfile(){
-    el.title.textContent = data.title;
-    el.subtitle.textContent = data.subtitle;
-    if(data.avatarData){el.avatar.style.backgroundImage = `url(${data.avatarData})`;el.avatar.textContent='';el.avatar.style.backgroundSize='cover'}else{el.avatar.style.backgroundImage='';el.avatar.textContent = initials(data.title)}
-  }
-  function initials(name){if(!name) return 'YK';return name.split(' ').map(s=>s[0]||'').slice(0,2).join('').toUpperCase()}
-
-  function renderLinks(){
-    el.links.innerHTML='';
-    const sorted = (data.links||[]).slice().sort((a,b)=> (a.order||999)-(b.order||999));
-    sorted.forEach(link=>{
-      const a = document.createElement('a');
-      a.href = link.url;
-      a.className = 'btn';
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      a.innerHTML = `<div style="flex:1"><div>${escapeHtml(link.label)}</div><small>${link.url}</small></div><div class="link-actions"><span class="pill">${clicks[link.id]||0} clicks</span></div>`;
-      a.addEventListener('click',()=>{ clicks[link.id] = (clicks[link.id]||0)+1; localStorage.setItem(clicksKey, JSON.stringify(clicks)); setTimeout(()=>renderLinks(),40) });
-      el.links.appendChild(a);
-    })
-  }
-
-  function renderAdmin(){
-    document.getElementById('in-title').value = data.title;
-    document.getElementById('in-subtitle').value = data.subtitle;
-    el.linksAdmin.innerHTML = '';
-    (data.links||[]).slice().sort((a,b)=> (a.order||999)-(b.order||999)).forEach(link=>{
-      const row = document.createElement('div');
-      row.style.display='flex';row.style.alignItems='center';row.style.gap='8px';row.style.marginBottom='8px'
-      row.innerHTML = `<div style="flex:1"><strong>${escapeHtml(link.label)}</strong><div class="muted" style="font-size:12px">${escapeHtml(link.url)}</div></div>`;
-      const edit = document.createElement('button'); edit.className='control-btn'; edit.textContent='Edit';
-      const del = document.createElement('button'); del.className='control-btn'; del.textContent='Delete';
-      const cp = document.createElement('button'); cp.className='control-btn'; cp.textContent='Copy';
-      const stats = document.createElement('div'); stats.className='pill'; stats.textContent = (clicks[link.id]||0)+' clicks';
-      edit.addEventListener('click',()=>openEdit(link));
-      del.addEventListener('click',()=>{ if(confirm('Delete this link?')){ data.links = data.links.filter(x=>x.id!==link.id); save(data); renderAdmin(); renderLinks(); } });
-      cp.addEventListener('click',()=>{ navigator.clipboard.writeText(link.url); alert('Link copied to clipboard'); });
-      row.appendChild(stats); row.appendChild(edit); row.appendChild(cp); row.appendChild(del);
-      el.linksAdmin.appendChild(row);
-    })
-  }
-
-  function openEdit(link){
-    const label = prompt('Label', link.label);
-    if(label==null) return;
-    const url = prompt('URL', link.url);
-    if(url==null) return;
-    const order = prompt('order (number)', link.order||1);
-    if(order==null) return;
-    link.label = label; link.url = url; link.order = Number(order)||1; save(data); renderAdmin(); renderLinks();
-  }
-
-  function escapeHtml(s){return (s+'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
-
-  // init
-  renderProfile(); renderLinks(); renderAdmin();
-
-  // admin toggles
-  document.getElementById('open-admin').addEventListener('click', ()=>{ document.getElementById('admin').classList.toggle('hidden'); document.getElementById('in-label').focus(); });
-  document.getElementById('close-admin').addEventListener('click', ()=>{ document.getElementById('admin').classList.add('hidden'); });
-
-  document.getElementById('add-link').addEventListener('click', ()=>{
-    const label = document.getElementById('in-label').value.trim();
-    const url = document.getElementById('in-url').value.trim();
-    const type = document.getElementById('in-type').value;
-    const order = Number(document.getElementById('in-order').value)||999;
-    if(!label || !url){ alert('Please set label and URL'); return; }
-    const newLink = {id: uid(), label, url, type, order};
-    data.links = data.links || [];
-    data.links.push(newLink);
-    save(data); renderLinks(); renderAdmin();
-    document.getElementById('in-label').value=''; document.getElementById('in-url').value='';
-  });
-
-  document.getElementById('in-title').addEventListener('input', (e)=>{ data.title = e.target.value; save(data); renderProfile(); });
-  document.getElementById('in-subtitle').addEventListener('input', (e)=>{ data.subtitle = e.target.value; save(data); renderProfile(); });
-
-  document.getElementById('imgfile').addEventListener('change', (e)=>{
-    const f = e.target.files[0]; if(!f) return; const reader = new FileReader(); reader.onload = ()=>{ data.avatarData = reader.result; save(data); renderProfile(); }
-    reader.readAsDataURL(f);
-  });
-
-  document.getElementById('copy-page').addEventListener('click', ()=>{ navigator.clipboard.writeText(location.href); alert('Page URL copied'); });
-
-  document.getElementById('export-json').addEventListener('click', ()=>{
-    const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a'); a.href=url; a.download='affiliate-linktree.json'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
-  });
-
-  document.getElementById('import-json-btn').addEventListener('click', ()=>{
-    const input = document.createElement('input'); input.type='file'; input.accept='application/json'; input.onchange = async (ev)=>{
-      const f = ev.target.files[0]; if(!f) return; const txt = await f.text(); try{ const obj = JSON.parse(txt); data = obj; save(data); renderProfile(); renderLinks(); renderAdmin(); alert('Imported'); }catch(e){alert('Invalid JSON')}
-    }; input.click();
-  });
-
-  document.getElementById('reset-all').addEventListener('click', ()=>{ if(confirm('Reset saved page and click data?')){ localStorage.removeItem(storageKey); localStorage.removeItem(clicksKey); data = load(); renderProfile(); renderLinks(); renderAdmin(); alert('Reset done'); } });
-
-  // small helper to persist title/subtitle when saved outside
-  window.addEventListener('beforeunload', ()=> save(data));
-
-})();
-</script>
+  <footer>© 2025 Momyangky | Affiliate Links</footer>
 
 </body>
 </html>
